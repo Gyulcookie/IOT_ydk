@@ -1,0 +1,76 @@
+body{
+	font-size:12px;
+	font-family:"맑은 고딕";
+	color:#333333
+}
+.header {
+	width: 1000px;
+	height: 150px;
+	border: 1px solid #cccccc;
+	margin-bottom: 10px;
+}
+
+.side {
+	width: 150px;
+	height: 500px;
+	border: 1px solid #cccccc;
+	float: left;
+	margin-right: 10px;
+}
+
+.section {
+	width: 840px;
+	height: 500px;
+	border: 1px solid #cccccc;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.footer {
+	width: 1000px;
+	height: 150px;
+	border: 1px solid #cccccc;
+	clear: both;
+}
+
+.top1 {
+	position: relative;
+	width: 150px;
+	height: 140px;
+	border: 1px solid #cccccc;
+	margin-top: 3px;
+	margin-left: 3px;
+	float: left;
+}
+
+.top2 {
+	width: 830px;
+	height: 140px;
+	border: 1px solid #cccccc;
+	margin-top: 3px;
+	margin-left: 162px;
+}
+
+a {
+	text-decoration: none; 
+}
+
+.menuLink {
+	position: relative;
+	top: 80px;
+	left: 20px;
+	font-size: 12px;
+	background-color: #e4effc;
+	float: left;
+	line-height: 30px; /* <br> 관련 간격 */
+	vertical-align: middle; /* 세로 정렬 */
+	text-align: center; /* 좌우 정렬; left, center, right */
+	width: 100px;
+	list-style: none; /* 항목 앞 dot 관련 */
+	border: 1px solid #ffffff;
+}
+
+.table1{
+	width:600px;
+	border:1px solid #cccccc;
+}
