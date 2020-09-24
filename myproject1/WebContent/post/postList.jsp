@@ -3,6 +3,21 @@
 <%@ include file="../include/dbcon.jsp" %>
 
 <%
+	String pageNo = request.getParameter("pageNo");
+	if(pageNo ==null){
+		pageNo="1";
+	}
+	
+	// (n-1)*10 + 1 
+	int startNo = (Integer.parseInt(pageNo)-1)*10 +1;
+	int endNo = startNo+9;
+	
+	int before = Integer.parseInt(pageNo) - 1;
+	int next = Integer.parseInt(pageNo) +1;
+	
+%>
+
+<%
 	String sql = "select count(*) as total from post";
 	ResultSet rs1 = stmt.executeQuery(sql);
 	
@@ -15,11 +30,11 @@
 	//sql = "select a1,a2,a3,a4,a5,a6,a7,a8 from post "+"order by a1 asc";
 	sql = "select p2.* from( "+
 		  "		select rownum rn,p1.* from( "+
-		  "          select a1,a2,a3,a4,a5,a6,a7,a8 "+
+		  "          select a1,a2,a3,a4,nvl(a5,' ') a5,nvl(a6,' ') a6,nvl(a7,' ') a7,nvl(a8,' ') a8"+
 		  "              from post "+ 
 		  "                  order by a1 asc) p1 "+
 		  "      )p2 "+
-		  "          where rn >=1 and rn <= 10 ";
+		  "          where rn >= "+startNo+" and rn <= "+endNo;
 	ResultSet rs2 = stmt.executeQuery(sql);
 	
 	
@@ -60,7 +75,7 @@
 		%>	
 		<tr>
 			<td class="td1"><%=rs2.getInt("rn") %></td>
-			<td class="td1"><%=a1 %></td>
+			<td class="td1"><a href="postModify.jsp?a1=<%=a1%>"><%=a1%></a></td>
 			<td class="td1"><%=a2 %></td>
 			<td class="td1"><%=a3 %></td>
 			<td class="td1"><%=a4 %></td>
@@ -73,6 +88,19 @@
 	}
 	%>
 </table>
+
+<% 
+	if(before > 0){
+		%>
+		<button type="button" onclick="location='postList.jsp?pageNo=<%=before%>'">이전</button>
+		<% 	
+	}else{
+		%>
+		<button type="button">이전</button>
+		<%
+	}
+%>
+<button type="button" onclick="location='postList.jsp?pageNo=<%=next%>'">다음</button>
 
 </body>
 </html>

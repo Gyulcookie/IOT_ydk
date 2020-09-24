@@ -11,8 +11,8 @@
 		<div class="top1"></div>
 		<div class="top2">
 			<ul>
-				<li class="menuLink"><a href="#">홈</a></li>
-				<li class="menuLink"><a href="#">게시판</a></li>
+				<li class="menuLink"><a href="../main/main.jsp">홈</a></li>
+				<li class="menuLink"><a href="../board/boardList.jsp">게시판</a></li>
 				<li class="menuLink"><a href="#">답변게시판</a></li>
 				<li class="menuLink"><a href="#">회원가입</a></li>
 				<li class="menuLink"><a href="#">로그인</a></li>

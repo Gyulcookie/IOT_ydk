@@ -3,7 +3,6 @@
 <%@ include file="../include/dbcon.jsp"%>
 
 
-
 <%
 	String a1 = request.getParameter("a1");
 	String a2 = request.getParameter("a2");
@@ -37,8 +36,8 @@
 		return;
 	}
 	
-	String qry = "insert into post(a1,a2,a3,a4,a5,a6,a7,a8)"+" values('"+a1+"','"+a2+"','"+a3+"','"+a4+"','"+a5+"','"+a6+"','"+a7+"','"+a8+"')";
 	
+	String qry = "update post set a2 = '"+a2+",a3='"+a3+"', a4='"+a4+"', a5='"+a5+"', a6='"+a6+"', a7='"+a7+"', a8='"+a8+"' where a1 = '"+a1+"'";
 	int result = stmt.executeUpdate(qry);
 	if(result > 0){
 		%>
@@ -53,7 +52,8 @@
 		alsert("저장 실패");
 		history.back();
 		</script>
-<%
+		<%
 	}
+	
 	
 %>
