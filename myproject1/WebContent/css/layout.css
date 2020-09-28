@@ -10,9 +10,9 @@ body{
 	margin-bottom: 10px;
 }
 .content{
-	width:1000px;
-	border:opx solid #cccccc;
-	text-align:center;
+	width:1100px;
+	border:10px solid #cccccc;
+	hieght:510px;
 }
 .side {
 	width: 150px;
@@ -23,7 +23,7 @@ body{
 }
 
 .section {
-	width: 840px;
+	width: 820px;
 	height: 500px;
 	border: 1px solid #cccccc;
 	float: left;
