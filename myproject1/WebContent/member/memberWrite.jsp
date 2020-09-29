@@ -70,8 +70,9 @@
 					</tr>
 					<tr>
 						<th class="td1">성별</th>
-						<td class="td1"><input type="radio" name="gender" value="M">남성,
-							<input type="radio" name="gender" value="F"></td>
+						<td class="td1">
+							<input type="radio" name="gender" value="M">남성
+							<input type="radio" name="gender" value="F">여성</td>
 					</tr>
 					<tr>
 						<th class="td1">주소</th>
@@ -81,13 +82,9 @@
 					</tr>
 					<tr>
 						<th class="td1">학력</th>
-						<td class="td1"><input type="radio" name="school" value="1">고졸,
-							<input type="radio" name="school" value="2">대졸, <input
-							type="radio" name="school" value="3">대학원졸</td>
-					</tr>
-					<tr>
-						<th class="td1">학력</th>
-						<td class="td1"><input type="text" name="school"></td>
+						<td class="td1"><input type="radio" name="school" value="1">고졸
+							<input type="radio" name="school" value="2">대졸 
+							<input type="radio" name="school" value="3">대학원졸</td>
 					</tr>
 				</table>
 
